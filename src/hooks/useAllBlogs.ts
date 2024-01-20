@@ -11,7 +11,7 @@ export const useAllBlogs = () => {
     try {
       setLoading(true);
       const fetchBlogs = await client.get('blogs')
-      setBlogs(fetchBlogs.data);
+      setBlogs(fetchBlogs.data.contents);
     } finally {
       setLoading(false);
     }
